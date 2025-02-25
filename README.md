@@ -23,5 +23,5 @@ binary classifiers, you will need to use one-versus-all to classify all 10 digit
 You may want to tune the hyperparameters using small validation sets to
 speed up the pro‐ cess. What accuracy can you reach?
 
-27. Generate a non-linear data set with two classes. Implement SVM model to
+26. Generate a non-linear data set with two classes. Implement SVM model to
 classify this non-linear data set using kernel trick.
