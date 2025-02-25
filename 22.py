@@ -10,12 +10,12 @@ df = pd.read_csv('house_price_prediction_data.csv')
 binary_cols = ['mainroad', 'guestroom', 'basement', 'hotwaterheating', 'airconditioning', 'preferred area (city center)']
 df[binary_cols] = df[binary_cols].replace({'yes': 1, 'no': 0})
 
-df = pd.get_dummies(df, columns=['furnishingstatus'], drop_first=True)
+df = pd.get_dummies(df, columns = ['furnishingstatus'], drop_first = True)
 
-X = df.drop('price', axis=1)
+X = df.drop('price', axis = 1)
 y = df['price']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
 
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
