@@ -10,7 +10,6 @@
 
 24.Generate a non linear data with two classes, and create a logistic regression model using Scikit learn.
 
-25. Train an SVM classifier on the MNIST dataset. Since SVM classifiers are binary classifiers, you will need to use one-versus-all to classify all 10 digits. You may want to tune the hyperparameters using small validation sets to speed up the pro‐ cess. What accuracy can you reach?
+25.Train an SVM classifier on the MNIST dataset. Since SVM classifiers are binary classifiers, you will need to use one-versus-all to classify all 10 digits. You may want to tune the hyperparameters using small validation sets to speed up the pro‐ cess. What accuracy can you reach?
 
-26. Generate a non-linear data set with two classes. Implement SVM model to
-classify this non-linear data set using kernel trick.
+26. Generate a non-linear data set with two classes. Implement SVM model to classify this non-linear data set using kernel trick.
