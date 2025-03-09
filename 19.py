@@ -1,17 +1,17 @@
 import numpy as np
 
 class SoftmaxRegression:
-    def __init__(self, learning_rate=0.01, max_epochs=1000):
+    def __init__(self, learning_rate = 0.01, max_epochs = 1000):
         self.learning_rate = learning_rate
         self.max_epochs = max_epochs
         self.W = None
         self.classes = None
         
     def _softmax(self, z):
-        z = z - np.max(z, axis=1, keepdims=True)
+        z = z - np.max(z, axis = 1, keepdims = True)
         e_z = np.exp(z)
 
-        return e_z / np.sum(e_z, axis=1, keepdims=True)
+        return e_z / np.sum(e_z, axis = 1, keepdims = True)
     
     def _one_hot(self, y):
         one_hot = np.zeros((len(y), len(self.classes)))
@@ -19,8 +19,8 @@ class SoftmaxRegression:
 
         return one_hot
     
-    def fit(self, X, y, tol=1e-4, patience=5):
-      X = np.insert(X, 0, 1, axis=1)
+    def fit(self, X, y, tol = 1e-4, patience = 5):
+      X = np.insert(X, 0, 1, axis = 1)
       self.classes = np.unique(y)
       n_classes = len(self.classes)
       n_features = X.shape[1]
@@ -54,7 +54,7 @@ class SoftmaxRegression:
           self.W += self.learning_rate * gradient
 
     def predict(self, X):
-        X = np.insert(X, 0, 1, axis=1)
+        X = np.insert(X, 0, 1, axis = 1)
         scores = X @ self.W
 
-        return self.classes[np.argmax(scores, axis=1)]
+        return self.classes[np.argmax(scores, axis = 1)]
