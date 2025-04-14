@@ -14,4 +14,6 @@
 
 26.Generate a non-linear data set with two classes. Implement SVM model to classify this non-linear data set using kernel trick.
 
+2.6.Write your own code in python to implement a neural network to solve a binary classification problem without using Scikit learn. Take a simple neural network with one hidden layer and 2 neurons in it.
+
 2.9.Train a CNN, to classify MNIST digit and compare its performance with deep neural network model.
